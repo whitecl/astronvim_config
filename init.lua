@@ -208,6 +208,7 @@ local config = {
     -- Set key bindings
     vim.keymap.set("n", "<C-s>", ":w!<CR>")
     vim.keymap.set("n", "<leader>v", ":vsplit<CR>")
+    vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>")
 
     -- Set autocommands
     vim.api.nvim_create_augroup("packer_conf", { clear = true })
