@@ -1,0 +1,3 @@
+Prereqs in Linux:
+
+- xclip
