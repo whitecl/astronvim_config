@@ -148,7 +148,7 @@ local config = {
           -- "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
-          -- "python",
+          "lua",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
@@ -244,7 +244,7 @@ local config = {
     -- All other entries override the require("<key>").setup({...}) call for default plugins
     ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
       -- config variable is the default configuration table for the setup function call
-      -- local null_ls = require "null-ls"
+      local null_ls = require "null-ls"
 
       -- Check supported formatters and linters
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
@@ -252,7 +252,9 @@ local config = {
       config.sources = {
         -- Set a formatter
         -- null_ls.builtins.formatting.stylua,
-        -- null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.prettier.with({
+          filetypes = { "html", "json", "yaml", "markdown", "typescript", "typescriptreact", "javascript", "javascriptreact" }
+        }),
       }
       return config -- return final config table
     end,
