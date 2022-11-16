@@ -154,7 +154,7 @@ local config = {
       disabled = { -- disable formatting capabilities for the listed language servers
         -- "sumneko_lua",
       },
-      timeout_ms = 1000, -- default format timeout
+      timeout_ms = 3000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
@@ -255,6 +255,12 @@ local config = {
         null_ls.builtins.formatting.prettier.with({
           filetypes = { "html", "json", "yaml", "markdown", "typescript", "typescriptreact", "javascript", "javascriptreact" }
         }),
+        null_ls.builtins.diagnostics.standardrb.with({
+          filetypes = { "ruby" }
+        }),
+        null_ls.builtins.formatting.standardrb.with({
+          filetypes = { "ruby" }
+        }),
       }
       return config -- return final config table
     end,
@@ -267,7 +273,7 @@ local config = {
     },
     -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
     ["mason-null-ls"] = { -- overrides `require("mason-null-ls").setup(...)`
-      -- ensure_installed = { "prettier", "stylua" },
+      ensure_installed = { "prettier", "standardrb" },
     },
   },
 
