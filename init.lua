@@ -233,12 +233,12 @@ local config = {
       -- },
 
       -- We also support a key value style plugin definition similar to NvChad:
-      ["ray-x/lsp_signature.nvim"] = {
-        event = "BufRead",
-        config = function()
-          require("lsp_signature").setup()
-        end,
-      },
+      -- ["ray-x/lsp_signature.nvim"] = {
+      --   event = "BufRead",
+      --   config = function()
+      --     require("lsp_signature").setup()
+      --   end,
+      -- },
     },
     -- All other entries override the require("<key>").setup({...}) call for default plugins
     ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
