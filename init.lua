@@ -253,7 +253,7 @@ local config = {
         -- Set a formatter
         -- null_ls.builtins.formatting.stylua,
         null_ls.builtins.diagnostics.eslint.with({
-          filetypes = { "javascript", "javascriptreact" }
+          filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" }
         }),
         null_ls.builtins.formatting.prettier.with({
           filetypes = { "html", "json", "yaml", "markdown", "typescript", "typescriptreact", "javascript", "javascriptreact" }
