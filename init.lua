@@ -149,6 +149,7 @@ local config = {
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           "lua",
+          "md"
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
