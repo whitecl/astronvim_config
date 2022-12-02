@@ -209,6 +209,8 @@ local config = {
       ["<leader>v"]  = { ":vsplit<CR>", desc = "VSplit" },
       ["<C-p>"]      = { "<cmd>Telescope find_files<cr>", desc = "Telescope: Find file by name" },
       ["<leader>tj"] = { "<cmd>TermExec cmd='yarn jest %' size=80 direction=vertical<cr>", desc = "Run Jest for Current File" },
+      ["<leader>tr"] = { "<cmd>TermExec cmd='bundle exec rspec %' size=80 direction=vertical<cr>", desc = "Run RSpec for Current File" },
+      ["<leader>te"] = { "<cmd>TermExec cmd='mix test %' size=80 direction=vertical<cr>", desc = "Run Mix Test for Current File" },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
