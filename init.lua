@@ -208,6 +208,7 @@ local config = {
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
       ["<leader>v"]  = { ":vsplit<CR>", desc = "VSplit" },
       ["<C-p>"]      = { "<cmd>Telescope find_files<cr>", desc = "Telescope: Find file by name" },
+      ["<leader>tj"] = { "<cmd>TermExec cmd='yarn jest %' size=80 direction=vertical<cr>", desc = "Run Jest for Current File" },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
