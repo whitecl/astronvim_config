@@ -132,6 +132,7 @@ local config = {
   diagnostics = {
     virtual_text = true,
     underline = true,
+    update_in_insert = false,
   },
 
   -- Extend LSP configuration
