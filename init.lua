@@ -256,7 +256,7 @@ local config = {
       config.sources = {
         -- Set a formatter
         -- null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.eslint.with({
+        null_ls.builtins.diagnostics.eslint_d.with({
           filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" }
         }),
         null_ls.builtins.formatting.prettier.with({
@@ -280,7 +280,7 @@ local config = {
     },
     -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
     ["mason-null-ls"] = { -- overrides `require("mason-null-ls").setup(...)`
-      ensure_installed = { "eslint", "prettier", "standardrb" },
+      ensure_installed = { "eslint_d", "prettier", "standardrb" },
     },
   },
 
