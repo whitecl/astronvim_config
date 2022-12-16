@@ -282,6 +282,13 @@ local config = {
     ["mason-null-ls"] = { -- overrides `require("mason-null-ls").setup(...)`
       ensure_installed = { "eslint_d", "prettier", "standardrb" },
     },
+    ["neo-tree"] = {
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+        },
+      },
+    }
   },
 
   -- LuaSnip Options
