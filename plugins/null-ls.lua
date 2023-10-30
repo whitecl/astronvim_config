@@ -15,11 +15,13 @@ return {
         filetypes = { "html", "json", "yaml", "markdown", "typescript", "typescriptreact", "javascript",
           "javascriptreact" }
       }),
-      null_ls.builtins.diagnostics.standardrb.with({
-        filetypes = { "ruby" }
+      null_ls.builtins.diagnostics.rubocop.with({
+        command = "bundle",
+        args = { "exec", "rubocop", "-f", "json", "--stdin", "$FILENAME" }
       }),
-      null_ls.builtins.formatting.standardrb.with({
-        filetypes = { "ruby" }
+      null_ls.builtins.formatting.rubocop.with({
+        command = "bundle",
+        args = {"exec", "rubocop", "--auto-correct", "-f", "quiet", "--stderr", "--stdin", "$FILENAME" }
       }),
     }
     return config -- return final config table
