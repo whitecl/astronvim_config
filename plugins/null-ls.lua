@@ -15,12 +15,6 @@ return {
         filetypes = { "html", "json", "yaml", "markdown", "typescript", "typescriptreact", "javascript",
           "javascriptreact" }
       }),
-      null_ls.builtins.diagnostics.standardrb.with({
-        filetypes = { "ruby" }
-      }),
-      null_ls.builtins.formatting.standardrb.with({
-        filetypes = { "ruby" }
-      }),
     }
     return config -- return final config table
   end,
