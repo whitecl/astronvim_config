@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -62,8 +60,21 @@ return {
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
-        -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        -- non-astro mappings
+        ["<Leader>v"] = { ":vsplit<CR>", desc = "VSplit" },
+        ["<C-p>"] = { "<cmd>Telescope find_files<cr>", desc = "Telescope: Find file by name" },
+        ["<Leader>tj"] = {
+          "<cmd>TermExec cmd='yarn jest %' size=80 direction=vertical<cr>",
+          desc = "Run Jest for Current File",
+        },
+        ["<Leader>tr"] = {
+          "<cmd>TermExec cmd='bundle exec rspec %' size=80 direction=vertical<cr>",
+          desc = "Run RSpec for Current File",
+        },
+        ["<Leader>te"] = {
+          "<cmd>TermExec cmd='mix test %' size=80 direction=vertical<cr>",
+          desc = "Run Mix Test for Current File",
+        },
       },
       t = {
         -- setting a mapping to false will disable it
