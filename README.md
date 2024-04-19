@@ -3,7 +3,7 @@
 #### Prerequisites
 
 - neovim 0.9.x+
-- nodejs + [tree-sitter](https://www.npmjs.com/package/tree-sitter)
+- nodejs + [tree-sitter-cli](https://www.npmjs.com/package/tree-sitter-cli)
 - ripgrep
 - (for linux) xclip
 
