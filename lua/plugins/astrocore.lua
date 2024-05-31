@@ -64,7 +64,7 @@ return {
         ["<Leader>v"] = { ":vsplit<CR>", desc = "VSplit" },
         ["<C-p>"] = { "<cmd>Telescope find_files<cr>", desc = "Telescope: Find file by name" },
         ["<Leader>tj"] = {
-          "<cmd>TermExec cmd='yarn jest %' size=80 direction=vertical<cr>",
+          "<cmd>TermExec cmd='yarn test %' size=80 direction=vertical<cr>",
           desc = "Run Jest for Current File",
         },
         ["<Leader>tr"] = {
