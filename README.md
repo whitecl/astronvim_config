@@ -10,7 +10,7 @@
 #### Clone the repository
 
 ```shell
-git clone https://github.com/whitecl/astronvim_config.git ~/.config/nvim
+git clone git@github.com:whitecl/astronvim_config.git ~/.config/nvim
 ```
 
 #### Start Neovim
