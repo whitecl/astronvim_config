@@ -11,7 +11,9 @@ return {
       "elixir",
       "javascript",
       "ruby",
-      "typescript"
+      "typescript",
+      "diff",
+      "git_rebase",
     })
   end,
 }
