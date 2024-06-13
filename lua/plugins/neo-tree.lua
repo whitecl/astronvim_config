@@ -5,5 +5,6 @@ return {
     opts.window.mappings = {
       o = "open",
     }
+    opts.filesystem.filtered_items.hide_dotfiles = false
   end,
 }
