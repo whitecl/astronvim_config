@@ -15,5 +15,11 @@ return {
       "diff",
       "git_rebase",
     })
+
+    -- https://github.com/nvim-treesitter/nvim-treesitter/issues/3363#issuecomment-2115177169
+    opts.indent = {
+      enable = true,
+      disable = { "ruby " },
+    }
   end,
 }
